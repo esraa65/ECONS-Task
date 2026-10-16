@@ -6,10 +6,12 @@ import {
   setupFooterCollisionAvoidance,
 } from "./floating-controls.js";
 import { optimizeBelowFoldImages } from "./images.js";
+import { setupHero } from "./hero.js";
 import { focusCurrentHashTarget, setupNavigation } from "./navigation.js";
 import { setupNewsletter } from "./newsletter.js";
 
 function initializeDynamicEnhancements() {
+  setupHero();
   setupNewsletter();
   setupBranchLink();
   setupNavigation();
