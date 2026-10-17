@@ -1,6 +1,6 @@
 import { localizeBranchLink, setupBranchLink } from "./branches.js?v=openfreemap-2";
 import { setupAudience } from "./audience.js";
-import { setupBrokerContactGroup } from "./broker-contact.js?v=combined-2";
+import { setupFinalSections } from "./broker-contact.js?v=separate-1";
 import { SELECTORS } from "./config.js";
 import { setupDecisionAudienceGroup } from "./decision-audience.js";
 import {
@@ -25,7 +25,7 @@ function initializeDynamicEnhancements() {
   setupJourney();
   setupNewsletter();
   setupBranchLink();
-  setupBrokerContactGroup();
+  setupFinalSections();
   setupNavigation();
   setupFooterCollisionAvoidance();
   optimizeBelowFoldImages();
@@ -39,7 +39,7 @@ function observeLocaleChanges() {
     setupServices();
     setupJourney();
     setupBranchLink();
-    setupBrokerContactGroup();
+    setupFinalSections();
     localizeFloatingControls();
     localizeBranchLink();
   });
