@@ -1951,6 +1951,11 @@ html[dir="rtl"] [data-final-section-eyebrow] {
   background: #122d38 !important;
 }
 
+/* Keep navigation available through the long Services flow and final Contact close. */
+html[data-navigation-pinned="true"] .site-header {
+  transform: translateY(0) !important;
+}
+
 /* 070-071: independent consultation and partnership close */
 #contact[data-final-section="contact"] {
   position: relative;

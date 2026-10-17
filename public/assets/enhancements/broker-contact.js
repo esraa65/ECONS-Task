@@ -81,6 +81,7 @@ export function setupFinalSections() {
   const copy = currentCopy();
   brokers.dataset.finalSection = "broker";
   contact.dataset.finalSection = "contact";
+  contact.dataset.scrollbarTone = "gold";
 
   ensureEyebrow(brokers, "[data-broker-intro]", copy.brokerLabel);
   ensureEyebrow(contact, "[data-final-cta-layout] > div", copy.contactLabel);

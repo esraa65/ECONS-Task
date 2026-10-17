@@ -1,5 +1,7 @@
 import { APP_CONFIG, SELECTORS } from "./config.js";
 
+const ALWAYS_VISIBLE_HEADER_SECTIONS = new Set(["services", "contact", "partners"]);
+
 function getNavigationLinks() {
   return [...document.querySelectorAll(SELECTORS.navigationLinks)];
 }
@@ -15,15 +17,25 @@ function focusSectionHeading(section) {
 function updateCurrentNavigationItem() {
   const links = getNavigationLinks();
   const sectionIds = [...new Set(links.map((link) => link.hash.slice(1)))];
-  const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+  const sections = sectionIds
+    .map((id) => document.getElementById(id))
+    .filter(Boolean)
+    .map((section) => ({ section, top: section.getBoundingClientRect().top }))
+    .sort((left, right) => left.top - right.top);
   const viewportMarker = window.innerHeight * 0.38;
-  let currentSectionId = sections[0]?.id;
+  let currentSectionId = sections[0]?.section.id;
 
-  for (const section of sections) {
-    if (section.getBoundingClientRect().top <= viewportMarker) {
+  for (const { section, top } of sections) {
+    if (top <= viewportMarker) {
       currentSectionId = section.id;
     }
   }
+
+  document.documentElement.dataset.navigationPinned = ALWAYS_VISIBLE_HEADER_SECTIONS.has(
+    currentSectionId,
+  )
+    ? "true"
+    : "false";
 
   links.forEach((link) => {
     if (link.hash === `#${currentSectionId}`) {
