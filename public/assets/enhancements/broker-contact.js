@@ -30,7 +30,9 @@ function ensureEyebrow(section, selector, text) {
     intro.prepend(eyebrow);
   }
 
-  eyebrow.textContent = text;
+  if (eyebrow.textContent !== text) {
+    eyebrow.textContent = text;
+  }
 }
 
 function observeGroup(group) {

@@ -1,6 +1,6 @@
 import { localizeBranchLink, setupBranchLink } from "./branches.js?v=openfreemap-2";
 import { setupAudience } from "./audience.js";
-import { setupBrokerContactGroup } from "./broker-contact.js?v=combined-1";
+import { setupBrokerContactGroup } from "./broker-contact.js?v=combined-2";
 import { SELECTORS } from "./config.js";
 import { setupDecisionAudienceGroup } from "./decision-audience.js";
 import {
