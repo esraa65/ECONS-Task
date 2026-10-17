@@ -1,6 +1,6 @@
 import { localizeBranchLink, setupBranchLink } from "./branches.js?v=openfreemap-2";
 import { setupAudience } from "./audience.js";
-import { setupFinalSections } from "./broker-contact.js?v=nav-header-2";
+import { setupFinalSections } from "./broker-contact.js?v=nav-header-3";
 import { SELECTORS } from "./config.js";
 import { setupDecisionAudienceGroup } from "./decision-audience.js";
 import {
@@ -12,7 +12,7 @@ import { optimizeBelowFoldImages } from "./images.js";
 import { setupHero } from "./hero.js";
 import { setupHook } from "./hook.js";
 import { setupJourney } from "./journey.js?v=roadmap-motion-4";
-import { focusCurrentHashTarget, setupNavigation } from "./navigation.js?v=nav-header-2";
+import { focusCurrentHashTarget, setupNavigation } from "./navigation.js?v=nav-header-3";
 import { setupNewsletter } from "./newsletter.js";
 import { setupServices } from "./services.js?v=selector-3";
 

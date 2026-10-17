@@ -31,6 +31,7 @@ function updateCurrentNavigationItem() {
     }
   }
 
+  document.documentElement.dataset.navigationSection = currentSectionId ?? "";
   document.documentElement.dataset.navigationPinned = ALWAYS_VISIBLE_HEADER_SECTIONS.has(
     currentSectionId,
   )

@@ -1956,6 +1956,15 @@ html[data-navigation-pinned="true"] .site-header {
   transform: translateY(0) !important;
 }
 
+html[data-navigation-section="services"] .header-surface {
+  background: rgb(243 244 246 / 94%);
+}
+
+html:is([data-navigation-section="contact"], [data-navigation-section="partners"])
+  .header-surface {
+  background: rgb(18 45 56 / 94%);
+}
+
 /* 070-071: independent consultation and partnership close */
 #contact[data-final-section="contact"] {
   position: relative;
